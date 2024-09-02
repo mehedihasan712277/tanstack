@@ -1,0 +1,29 @@
+{
+    "posts" : [
+        {
+            "id": 1,
+            "title": "Introduction to JSON Server 1",
+            "body": "JSON Server is a tool that allows you to create a full REST API with zero coding in less than 30 seconds."
+        },
+        {
+            "id": 2,
+            "title": "Understanding REST APIs",
+            "body": "REST APIs are a set of rules that developers follow when they create their API. REST APIs allow developers to interact with services."
+        },
+        {
+            "id": 3,
+            "title": "How to use JSON Server",
+            "body": "To use JSON Server, you need to install it via npm and then run it with a JSON file that contains your data."
+        },
+        {
+            "id": 4,
+            "title": "Advanced Features of JSON Server",
+            "body": "JSON Server allows you to add custom routes, middleware, and even a full-fledged GraphQL API on top of your existing JSON data."
+        },
+        {
+            "id": 5,
+            "title": "Mocking Data for Testing",
+            "body": "JSON Server is a great tool for mocking data for frontend development and testing purposes."
+        }
+    ]
+}
