@@ -9,6 +9,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import PostDetailsRQ from './components/PostDetailsRQ'
 import PaginatedQueries from './components/PaginatedQueries'
 import InfiniteQueries from './components/InfiniteQueries'
+import LoadOnScroll from './components/LoadOnScroll'
+import Form from './components/Form'
 
 
 const allRoute = createBrowserRouter([
@@ -41,6 +43,14 @@ const allRoute = createBrowserRouter([
       {
         path: "/infiniteQueries",
         element: <InfiniteQueries></InfiniteQueries>
+      },
+      {
+        path: "/load_on_scroll",
+        element: <LoadOnScroll></LoadOnScroll>
+      },
+      {
+        path: "/form",
+        element: <Form></Form>
       }
     ]
   }

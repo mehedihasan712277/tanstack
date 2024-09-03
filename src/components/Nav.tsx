@@ -9,6 +9,8 @@ const Nav = () => {
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/rq">RQ</NavLink>
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/fruits">Pagination</NavLink>
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/infiniteQueries">Infinity Scroll</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/load_on_scroll">Load on Scroll</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/form">Mutation</NavLink>
         </div>
     )
 }

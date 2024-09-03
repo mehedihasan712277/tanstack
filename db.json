@@ -1,71 +1,191 @@
 {
-    "posts" : [
-        {
-            "id": 1,
-            "title": "Introduction to JSON Server 1",
-            "body": "JSON Server is a tool that allows you to create a full REST API with zero coding in less than 30 seconds."
-        },
-        {
-            "id": 2,
-            "title": "Understanding REST APIs",
-            "body": "REST APIs are a set of rules that developers follow when they create their API. REST APIs allow developers to interact with services."
-        },
-        {
-            "id": 3,
-            "title": "How to use JSON Server",
-            "body": "To use JSON Server, you need to install it via npm and then run it with a JSON file that contains your data."
-        },
-        {
-            "id": 4,
-            "title": "Advanced Features of JSON Server",
-            "body": "JSON Server allows you to add custom routes, middleware, and even a full-fledged GraphQL API on top of your existing JSON data."
-        },
-        {
-            "id": 5,
-            "title": "Mocking Data for Testing",
-            "body": "JSON Server is a great tool for mocking data for frontend development and testing purposes."
-        }
-    ],
-    "fruits" : [
-        { "id": "1", "name": "Apple" },
-        { "id": "2", "name": "Banana" },
-        { "id": "3", "name": "Cherry" },
-        { "id": "4", "name": "Date" },
-        { "id": "5", "name": "Elderberry" },
-        { "id": "6", "name": "Fig" },
-        { "id": "7", "name": "Grape" },
-        { "id": "8", "name": "Honeydew" },
-        { "id": "9", "name": "Indian Fig" },
-        { "id": "10","name": "Jackfruit" },
-        { "id": "11","name": "Kiwi" },
-        { "id": "12","name": "Lemon" },
-        { "id": "13","name": "Mango" },
-        { "id": "14","name": "Nectarine" },
-        { "id": "15","name": "Orange" },
-        { "id": "16","name": "Papaya" },
-        { "id": "17","name": "Quince" },
-        { "id": "18","name": "Raspberry" },
-        { "id": "19","name": "Strawberry" },
-        { "id": "20","name": "Tomato" },
-        { "id": "21", "name": "Ugli Fruit" },
-        { "id": "22", "name": "Vanilla Bean" },
-        { "id": "23", "name": "Watermelon" },
-        { "id": "24", "name": "Xigua" },
-        { "id": "25", "name": "Yellow Passion Fruit" },
-        { "id": "26", "name": "Zucchini" },
-        { "id": "27", "name": "Apricot" },
-        { "id": "28", "name": "Blackberry" },
-        { "id": "29", "name": "Cantaloupe" },
-        { "id": "30", "name": "Dragon Fruit" },
-        { "id": "31", "name": "Elderberry" },
-        { "id": "32", "name": "Fig" },
-        { "id": "33", "name": "Grapefruit" },
-        { "id": "34", "name": "Huckleberry" },
-        { "id": "35", "name": "Ilama" },
-        { "id": "36", "name": "Jujube" },
-        { "id": "37", "name": "Kumquat" },
-        { "id": "38", "name": "Lychee" },
-        { "id": "39", "name": "Mulberry" },
-        { "id": "40", "name": "Nance" }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to JSON Server 1",
+      "body": "JSON Server is a tool that allows you to create a full REST API with zero coding in less than 30 seconds."
+    },
+    {
+      "id": 2,
+      "title": "Understanding REST APIs",
+      "body": "REST APIs are a set of rules that developers follow when they create their API. REST APIs allow developers to interact with services."
+    },
+    {
+      "id": 3,
+      "title": "How to use JSON Server",
+      "body": "To use JSON Server, you need to install it via npm and then run it with a JSON file that contains your data."
+    },
+    {
+      "id": 4,
+      "title": "Advanced Features of JSON Server",
+      "body": "JSON Server allows you to add custom routes, middleware, and even a full-fledged GraphQL API on top of your existing JSON data."
+    },
+    {
+      "id": 5,
+      "title": "Mocking Data for Testing",
+      "body": "JSON Server is a great tool for mocking data for frontend development and testing purposes."
+    }
+  ],
+  "fruits": [
+    {
+      "id": "1",
+      "name": "Apple"
+    },
+    {
+      "id": "2",
+      "name": "Banana"
+    },
+    {
+      "id": "3",
+      "name": "Cherry"
+    },
+    {
+      "id": "4",
+      "name": "Date"
+    },
+    {
+      "id": "5",
+      "name": "Elderberry"
+    },
+    {
+      "id": "6",
+      "name": "Fig"
+    },
+    {
+      "id": "7",
+      "name": "Grape"
+    },
+    {
+      "id": "8",
+      "name": "Honeydew"
+    },
+    {
+      "id": "9",
+      "name": "Indian Fig"
+    },
+    {
+      "id": "10",
+      "name": "Jackfruit"
+    },
+    {
+      "id": "11",
+      "name": "Kiwi"
+    },
+    {
+      "id": "12",
+      "name": "Lemon"
+    },
+    {
+      "id": "13",
+      "name": "Mango"
+    },
+    {
+      "id": "14",
+      "name": "Nectarine"
+    },
+    {
+      "id": "15",
+      "name": "Orange"
+    },
+    {
+      "id": "16",
+      "name": "Papaya"
+    },
+    {
+      "id": "17",
+      "name": "Quince"
+    },
+    {
+      "id": "18",
+      "name": "Raspberry"
+    },
+    {
+      "id": "19",
+      "name": "Strawberry"
+    },
+    {
+      "id": "20",
+      "name": "Tomato"
+    },
+    {
+      "id": "21",
+      "name": "Ugli Fruit"
+    },
+    {
+      "id": "22",
+      "name": "Vanilla Bean"
+    },
+    {
+      "id": "23",
+      "name": "Watermelon"
+    },
+    {
+      "id": "24",
+      "name": "Xigua"
+    },
+    {
+      "id": "25",
+      "name": "Yellow Passion Fruit"
+    },
+    {
+      "id": "26",
+      "name": "Zucchini"
+    },
+    {
+      "id": "27",
+      "name": "Apricot"
+    },
+    {
+      "id": "28",
+      "name": "Blackberry"
+    },
+    {
+      "id": "29",
+      "name": "Cantaloupe"
+    },
+    {
+      "id": "30",
+      "name": "Dragon Fruit"
+    },
+    {
+      "id": "31",
+      "name": "Elderberry"
+    },
+    {
+      "id": "32",
+      "name": "Fig"
+    },
+    {
+      "id": "33",
+      "name": "Grapefruit"
+    },
+    {
+      "id": "34",
+      "name": "Huckleberry"
+    },
+    {
+      "id": "35",
+      "name": "Ilama"
+    },
+    {
+      "id": "36",
+      "name": "Jujube"
+    },
+    {
+      "id": "37",
+      "name": "Kumquat"
+    },
+    {
+      "id": "38",
+      "name": "Lychee"
+    },
+    {
+      "id": "39",
+      "name": "Mulberry"
+    },
+    {
+      "id": "40",
+      "name": "Nance"
+    }
+  ]
 }

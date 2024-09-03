@@ -1,5 +1,7 @@
 import { useInfiniteQuery, QueryFunctionContext } from "@tanstack/react-query";
+import { useInView } from "react-intersection-observer";
 import axios from "axios";
+import { useEffect } from "react";
 
 type FruitDataType = {
     id: string;
@@ -7,11 +9,12 @@ type FruitDataType = {
 };
 
 const fetchFruits = ({ pageParam }: QueryFunctionContext): Promise<{ data: FruitDataType[] }> => {
-    return axios.get(`http://localhost:4000/fruits/?_limit=11&_page=${pageParam}`);
+    return axios.get(`http://localhost:4000/fruits/?_limit=10&_page=${pageParam}`);
 };
 
 const LoadOnScroll = () => {
-    const { data, isLoading, isError, error, fetchNextPage, hasNextPage } = useInfiniteQuery({
+    const { ref, inView } = useInView()
+    const { data, isLoading, isError, error, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
         queryKey: ["fruits"],
         queryFn: fetchFruits,
         initialPageParam: 1,
@@ -23,6 +26,12 @@ const LoadOnScroll = () => {
             }
         }
     });
+
+    useEffect(() => {
+        if (inView) {
+            fetchNextPage();
+        }
+    }, [fetchNextPage, inView])
 
     if (isLoading) {
         return <p>loading......</p>;
@@ -42,7 +51,7 @@ const LoadOnScroll = () => {
                     ))}
                 </div>
             ))}
-            <button className="m-4 btn btn-outline" disabled={!hasNextPage} onClick={() => fetchNextPage()}>Load more..</button>
+            <div ref={ref} className="text-center p-4">{isFetchingNextPage && "Loading...."}</div>
         </div>
     );
 };
