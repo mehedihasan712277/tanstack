@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"
+import { keepPreviousData, useQuery } from "@tanstack/react-query"
 import axios from "axios"
 import { useState } from "react";
 
@@ -15,7 +15,8 @@ const PaginatedQueries = () => {
     const [page, setPage] = useState(1);
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ["fruits", page],
-        queryFn: () => fetchFruits(page)
+        queryFn: () => fetchFruits(page),
+        placeholderData: keepPreviousData
     })
 
 

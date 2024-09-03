@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import PostDetailsRQ from './components/PostDetailsRQ'
 import PaginatedQueries from './components/PaginatedQueries'
+import InfiniteQueries from './components/InfiniteQueries'
 
 
 const allRoute = createBrowserRouter([
@@ -36,6 +37,10 @@ const allRoute = createBrowserRouter([
       {
         path: "/fruits",
         element: <PaginatedQueries></PaginatedQueries>
+      },
+      {
+        path: "/infiniteQueries",
+        element: <InfiniteQueries></InfiniteQueries>
       }
     ]
   }

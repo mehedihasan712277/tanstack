@@ -46,6 +46,26 @@
         { "id": "17","name": "Quince" },
         { "id": "18","name": "Raspberry" },
         { "id": "19","name": "Strawberry" },
-        { "id": "20","name": "Tomato" }
+        { "id": "20","name": "Tomato" },
+        { "id": "21", "name": "Ugli Fruit" },
+        { "id": "22", "name": "Vanilla Bean" },
+        { "id": "23", "name": "Watermelon" },
+        { "id": "24", "name": "Xigua" },
+        { "id": "25", "name": "Yellow Passion Fruit" },
+        { "id": "26", "name": "Zucchini" },
+        { "id": "27", "name": "Apricot" },
+        { "id": "28", "name": "Blackberry" },
+        { "id": "29", "name": "Cantaloupe" },
+        { "id": "30", "name": "Dragon Fruit" },
+        { "id": "31", "name": "Elderberry" },
+        { "id": "32", "name": "Fig" },
+        { "id": "33", "name": "Grapefruit" },
+        { "id": "34", "name": "Huckleberry" },
+        { "id": "35", "name": "Ilama" },
+        { "id": "36", "name": "Jujube" },
+        { "id": "37", "name": "Kumquat" },
+        { "id": "38", "name": "Lychee" },
+        { "id": "39", "name": "Mulberry" },
+        { "id": "40", "name": "Nance" }
     ]
 }

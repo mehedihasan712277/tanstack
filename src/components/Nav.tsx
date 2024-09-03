@@ -7,7 +7,8 @@ const Nav = () => {
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/">Home</NavLink>
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/traditional">Traditonal</NavLink>
             <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/rq">RQ</NavLink>
-            <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/fruits">Fruits</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/fruits">Pagination</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-black"} to="/infiniteQueries">Infinity Scroll</NavLink>
         </div>
     )
 }
