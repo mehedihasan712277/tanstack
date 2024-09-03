@@ -6,6 +6,8 @@ import PostRQ from './components/PostRQ'
 import Maincontainer from './components/Maincontainer'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import PostDetailsRQ from './components/PostDetailsRQ'
+import PaginatedQueries from './components/PaginatedQueries'
 
 
 const allRoute = createBrowserRouter([
@@ -14,6 +16,7 @@ const allRoute = createBrowserRouter([
     element: <Maincontainer></Maincontainer>,
     errorElement: <Error></Error>,//This component must be imported
     children: [
+
       {
         path: "/",
         element: <HomePage></HomePage>
@@ -25,6 +28,14 @@ const allRoute = createBrowserRouter([
       {
         path: "/rq",
         element: <PostRQ></PostRQ>
+      },
+      {
+        path: "/rq/:id",
+        element: <PostDetailsRQ></PostDetailsRQ>
+      },
+      {
+        path: "/fruits",
+        element: <PaginatedQueries></PaginatedQueries>
       }
     ]
   }
