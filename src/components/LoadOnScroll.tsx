@@ -15,7 +15,7 @@ const fetchFruits = ({ pageParam }: QueryFunctionContext): Promise<{ data: Fruit
 const LoadOnScroll = () => {
     const { ref, inView } = useInView()
     const { data, isLoading, isError, error, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
-        queryKey: ["fruits"],
+        queryKey: ["fruit"],
         queryFn: fetchFruits,
         initialPageParam: 1,
         getNextPageParam: (_lastPage, allPages) => {

@@ -30,8 +30,22 @@ const Form = () => {
 
     const { mutate: addMutate } = useMutation({
         mutationFn: postData,
-        onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ["posts"] })
+        onSuccess: (newData) => {
+            // method 1
+            // queryClient.invalidateQueries({ queryKey: ["posts"] })
+
+            // method 2
+            queryClient.setQueryData(["posts"], (oldQueryData: any) => {
+                console.log(oldQueryData);
+                console.log(newData);
+
+
+                return {
+                    ...oldQueryData,
+                    data: [...oldQueryData.data, newData.data]
+                }
+            })
+
         }
     })
 
