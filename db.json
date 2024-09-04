@@ -26,9 +26,19 @@
       "body": "JSON Server is a great tool for mocking data for frontend development and testing purposes."
     },
     {
-      "title": "1",
-      "body": "1",
+      "title": "hi",
+      "body": "hello",
       "id": 6
+    },
+    {
+      "title": "mehedi",
+      "body": "hasan",
+      "id": 7
+    },
+    {
+      "title": "fbf",
+      "body": "dgf",
+      "id": 8
     }
   ],
   "fruits": [

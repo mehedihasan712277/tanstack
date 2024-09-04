@@ -30,22 +30,41 @@ const Form = () => {
 
     const { mutate: addMutate } = useMutation({
         mutationFn: postData,
-        onSuccess: (newData) => {
-            // method 1
-            // queryClient.invalidateQueries({ queryKey: ["posts"] })
+        // onSuccess: (newData) => {
+        //     // method 1
+        //     // queryClient.invalidateQueries({ queryKey: ["posts"] })
 
-            // method 2
+        //     // method 2
+        // queryClient.setQueryData(["posts"], (oldQueryData: any) => {
+        //     return {
+        //         ...oldQueryData,
+        //         data: [...oldQueryData.data, newData.data]
+        //     }
+        // })
+
+        // }
+
+        //method 3
+        onMutate: async (newPost) => {
+            await queryClient.cancelQueries({ queryKey: ["posts"] })
+            const previousPostData = queryClient.getQueryData(["posts"])
+
             queryClient.setQueryData(["posts"], (oldQueryData: any) => {
-                console.log(oldQueryData);
-                console.log(newData);
-
-
                 return {
                     ...oldQueryData,
-                    data: [...oldQueryData.data, newData.data]
+                    data: [...oldQueryData.data, { ...newPost, id: String(oldQueryData?.data?.length + 1) }]
                 }
             })
 
+            return {
+                previousPostData
+            }
+        },
+        onError: (_error, _post, contex) => {
+            queryClient.setQueryData(["posts"], contex?.previousPostData)
+        },
+        onSettled: () => {
+            queryClient.invalidateQueries({ queryKey: ["posts"] })
         }
     })
 
